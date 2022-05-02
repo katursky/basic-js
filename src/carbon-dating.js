@@ -19,7 +19,7 @@ const HALF_LIFE_PERIOD = 5730;
  */
  function dateSample(sampleActivity) {
   let num = Number(sampleActivity);
-  if (Number.isInteger(num)) {
+  if (typeof num === 'number') {
     const log = 0.693;
     const k = log / HALF_LIFE_PERIOD;
     const i = Math.log(MODERN_ACTIVITY / num);

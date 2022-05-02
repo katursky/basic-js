@@ -22,10 +22,10 @@ const { NotImplementedError } = require('../extensions/index.js');
   }
   
   let finArray = newArray.map((item => 
-    item.trim().slice(0, 1))
+    item.trim().toUpperCase().slice(0, 1))
   );
   let result = finArray.sort().join('');
-    return result.toUpperCase();
+    return result;
   }
 
 module.exports = {
