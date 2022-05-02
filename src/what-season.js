@@ -12,6 +12,10 @@ const { NotImplementedError } = require('../extensions/index.js');
  * 
  */
  function getSeason(date) {
+   if (date === undefined) {
+     return 'Unable to determine the time of year!';
+   }
+
    let dateString = date.toISOString();
    let dateStringSlice = dateString.slice(4, 8);
    let dateStringFin = dateStringSlice.replace('-', '')
