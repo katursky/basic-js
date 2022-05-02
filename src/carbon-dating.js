@@ -17,8 +17,8 @@ const HALF_LIFE_PERIOD = 5730;
  * dateSample('WOOT!') => false
  *
  */
- function dateSample(str) {
-  let num = Number(str);
+ function dateSample(sampleActivity) {
+  let num = Number(sampleActivity);
   if (Number.isInteger(num)) {
     const log = 0.693;
     const k = log / HALF_LIFE_PERIOD;
